@@ -1,0 +1,40 @@
+public class Common {
+     public int count (String a, String b) {
+	char commons[] = new char[a.length()];
+	int k = 0;
+        for (int c=0;c<a.length();c++)
+	{
+		int cont=0;
+		char compa = a.charAt(c);
+		for (int c2=0;c2<k;c2++)
+		{
+			if (commons[c2]==compa)
+			{
+				cont++;
+			}
+		}
+		for (int c1=0;c1<b.length();c1++)
+		{
+			char compb = b.charAt(c1);
+			if (compa == compb)
+			{
+				int cont1=0;
+
+			for (int c2=0;c2<k;c2++)
+			{
+				if (commons[c2]==compb)
+				{
+					cont1++;
+				}
+			}
+				if (cont==cont1){
+				commons[k] = compa;
+				k++;
+				break;
+				}
+			}
+		}
+	}
+	return k;
+     }
+  }
